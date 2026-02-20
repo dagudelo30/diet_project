@@ -1,0 +1,134 @@
+[
+  {
+    "pubmed_id": "40676527",
+    "ok": true,
+    "oa_service_ok": true,
+    "oa_tgz_url": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/5c/3a/PMC12273308.tar.gz",
+    "oa_pdf_url": null,
+    "pmc_tgz_downloaded": true,
+    "pdf_downloaded": true,
+    "nxml_downloaded": false,
+    "supp_downloaded": false
+  },
+  {
+    "pubmed_id": "31281883",
+    "ok": true,
+    "oa_service_ok": true,
+    "oa_tgz_url": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/c5/3b/PMC6609165.tar.gz",
+    "oa_pdf_url": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/c5/3b/aav8391.PMC6609165.pdf",
+    "pmc_tgz_downloaded": true,
+    "pdf_downloaded": true,
+    "nxml_downloaded": false,
+    "supp_downloaded": false
+  },
+  {
+    "pubmed_id": "31418488",
+    "ok": true,
+    "oa_service_ok": true,
+    "oa_tgz_url": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/d1/f1/PMC6972549.tar.gz",
+    "oa_pdf_url": null,
+    "pmc_tgz_downloaded": true,
+    "pdf_downloaded": true,
+    "nxml_downloaded": false,
+    "supp_downloaded": false
+  },
+  {
+    "pubmed_id": "37491204",
+    "ok": true,
+    "oa_service_ok": true,
+    "oa_tgz_url": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/cb/39/PMC10367317.tar.gz",
+    "oa_pdf_url": null,
+    "pmc_tgz_downloaded": true,
+    "pdf_downloaded": true,
+    "nxml_downloaded": false,
+    "supp_downloaded": false
+  },
+  {
+    "pubmed_id": "37723422",
+    "ok": true,
+    "oa_service_ok": true,
+    "oa_tgz_url": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/1f/9a/PMC10506323.tar.gz",
+    "oa_pdf_url": null,
+    "pmc_tgz_downloaded": true,
+    "pdf_downloaded": true,
+    "nxml_downloaded": false,
+    "supp_downloaded": false
+  },
+  {
+    "pubmed_id": "23739472",
+    "ok": true,
+    "oa_service_ok": true,
+    "oa_tgz_url": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/b0/a5/PMC3691002.tar.gz",
+    "oa_pdf_url": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/b0/a5/S1751731113000888a.PMC3691002.pdf",
+    "pmc_tgz_downloaded": true,
+    "pdf_downloaded": true,
+    "nxml_downloaded": false,
+    "supp_downloaded": false
+  },
+  {
+    "pubmed_id": "26891056",
+    "ok": true,
+    "oa_service_ok": true,
+    "oa_tgz_url": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/ef/ba/PMC4758630.tar.gz",
+    "oa_pdf_url": null,
+    "pmc_tgz_downloaded": true,
+    "pdf_downloaded": true,
+    "nxml_downloaded": false,
+    "supp_downloaded": false
+  },
+  {
+    "pubmed_id": "35281842",
+    "ok": true,
+    "oa_service_ok": true,
+    "oa_tgz_url": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/b9/2a/PMC8905538.tar.gz",
+    "oa_pdf_url": null,
+    "pmc_tgz_downloaded": true,
+    "pdf_downloaded": true,
+    "nxml_downloaded": false,
+    "supp_downloaded": false
+  },
+  {
+    "pubmed_id": "36199148",
+    "ok": true,
+    "oa_service_ok": true,
+    "oa_tgz_url": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/bc/3f/PMC9533493.tar.gz",
+    "oa_pdf_url": null,
+    "pmc_tgz_downloaded": true,
+    "pdf_downloaded": true,
+    "nxml_downloaded": false,
+    "supp_downloaded": false
+  },
+  {
+    "pubmed_id": "36425044",
+    "ok": true,
+    "oa_service_ok": true,
+    "oa_tgz_url": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/4f/cd/PMC9679419.tar.gz",
+    "oa_pdf_url": null,
+    "pmc_tgz_downloaded": true,
+    "pdf_downloaded": true,
+    "nxml_downloaded": false,
+    "supp_downloaded": false
+  },
+  {
+    "pubmed_id": "38892420",
+    "ok": true,
+    "oa_service_ok": true,
+    "oa_tgz_url": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/f4/d0/PMC11172659.tar.gz",
+    "oa_pdf_url": null,
+    "pmc_tgz_downloaded": true,
+    "pdf_downloaded": true,
+    "nxml_downloaded": false,
+    "supp_downloaded": false
+  },
+  {
+    "pubmed_id": "39237607",
+    "ok": true,
+    "oa_service_ok": true,
+    "oa_tgz_url": "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/2d/af/PMC11377694.tar.gz",
+    "oa_pdf_url": null,
+    "pmc_tgz_downloaded": true,
+    "pdf_downloaded": true,
+    "nxml_downloaded": false,
+    "supp_downloaded": false
+  }
+]
