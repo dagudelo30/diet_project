@@ -1,0 +1,55 @@
+{
+  "31281883_PRJNA517480": {
+    "pmid": "31281883",
+    "bioproject": "PRJNA517480",
+    "status": "completed",
+    "actions": [
+      {
+        "file": "aav8391_Data_S1.xlsx",
+        "action": "join",
+        "col_sra": "sample_id",
+        "col_supp": "Cow ID",
+        "strategy": "direct",
+        "matched_rows": 10003,
+        "total_rows": 10003,
+        "output": "D:\\OneDrive - CGIAR\\Desktop\\codigos_dengue\\diet_project\\data\\aligned\\31281883_PRJNA517480_metadata.updated.csv",
+        "llm_confidence": "high"
+      },
+      {
+        "file": "aav8391_Data_S10.zip",
+        "action": "save_as_link",
+        "column": "GenotypeLink",
+        "classification": {
+          "data_type": "genotype",
+          "format": "PLINK",
+          "column_name_for_link": "GenotypeLink",
+          "description": "Genotype data for Ruminomics Holstein and Nordic Red cattle, including BED, BIM, FAM, and NOF files."
+        }
+      },
+      {
+        "file": "aav8391_Data_S5.xlsx",
+        "action": "no_join",
+        "reason": "Table 2 contains rows that represent biological features (OTUs) rather than individual animals or samples. The overlap in values is not indicative of a common sample identifier, as the values are related to occupancy and abundance metrics rather than unique identifiers for animals. For example, the SRA sample_id values are ['389', '388', '387'], while the OTU_ID values are ['denovo1003904', 'denovo1006812', 'denovo1013006'], which do not correspond to any animal identifiers."
+      },
+      {
+        "file": "aav8391_Data_S6.xlsx",
+        "action": "no_join",
+        "reason": "Table 2 contains rows that represent biological features (OTUs) rather than individual animals or samples. The OUT ID values do not correspond to any identifiable animal or sample identifiers from Table 1. For example, 'denovo100870' and 'denovo57586' are not related to the sample IDs '389', '388', etc."
+      },
+      {
+        "file": "aav8391_Data_S7.xlsx",
+        "action": "no_join",
+        "reason": "RAG data_type=genotype, not a per-animal table"
+      },
+      {
+        "file": "aav8391_Data_S8.xlsx",
+        "action": "no_join",
+        "reason": "Table 2 contains rows that represent biological features (OTUs) rather than individual animals or samples. The ID values in Table 2 are similarity scores, not identifiers for specific animals. For example, the ID values are ['0.9', '99%', '0.88', '86%', '0.87'], which do not correspond to any sample identifiers in Table 1."
+      }
+    ],
+    "errors": [],
+    "links_to_add_in_tabla_estudios": {
+      "GenotypeLink": "D:\\OneDrive - CGIAR\\Desktop\\codigos_dengue\\diet_project\\data\\raw\\31281883\\pmc_package\\PMC6609165\\aav8391_Data_S10.zip"
+    }
+  }
+}

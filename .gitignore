@@ -1,3 +1,9 @@
 # Data folders
 data/raw/
 data/extracted/
+data/aligned/
+data/processed/
+data/PMID_Bioproject_SRAmetadata
+
+
+.env
