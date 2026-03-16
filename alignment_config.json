@@ -9,7 +9,7 @@
         "action": "join",
         "col_sra": "sample_id",
         "col_supp": "Cow ID",
-        "strategy": "direct",
+        "strategy": "numeric_extract",
         "matched_rows": 10003,
         "total_rows": 10003,
         "output": "D:\\OneDrive - CGIAR\\Desktop\\codigos_dengue\\diet_project\\data\\aligned\\31281883_PRJNA517480_metadata.updated.csv",
@@ -23,13 +23,13 @@
           "data_type": "genotype",
           "format": "PLINK",
           "column_name_for_link": "GenotypeLink",
-          "description": "Genotype data for Ruminomics Holstein and Nordic Red cattle, including BED, BIM, FAM, and NOF files."
+          "description": "Genotype data for Ruminomics Holstein and Nordic Red cattle in PLINK format."
         }
       },
       {
         "file": "aav8391_Data_S5.xlsx",
         "action": "no_join",
-        "reason": "Table 2 contains rows that represent biological features (OTUs) rather than individual animals or samples. The overlap in values is not indicative of a common sample identifier, as the values are related to occupancy and abundance metrics rather than unique identifiers for animals. For example, the SRA sample_id values are ['389', '388', '387'], while the OTU_ID values are ['denovo1003904', 'denovo1006812', 'denovo1013006'], which do not correspond to any animal identifiers."
+        "reason": "Table 2 contains rows that represent biological features (OTUs) rather than individual animals. The overlap in values is not indicative of a common sample identifier, as the values do not correspond to animal identifiers. For example, the SRA sample_id values are ['389', '388', '387'], while the OTU_ID values are ['denovo1003904', 'denovo1006812', 'denovo1013006'], which do not match or relate to each other."
       },
       {
         "file": "aav8391_Data_S6.xlsx",
@@ -44,12 +44,856 @@
       {
         "file": "aav8391_Data_S8.xlsx",
         "action": "no_join",
-        "reason": "Table 2 contains rows that represent biological features (OTUs) rather than individual animals or samples. The ID values in Table 2 are similarity scores, not identifiers for specific animals. For example, the ID values are ['0.9', '99%', '0.88', '86%', '0.87'], which do not correspond to any sample identifiers in Table 1."
+        "reason": "Table 2 contains rows that represent biological features (OTUs) rather than individual animals or samples. The ID values in Table 2 are similarity scores, not identifiers for specific samples. For example, the ID values are ['0.9', '99%', '0.88', '86%', '0.87'], which do not correspond to any sample identifiers in Table 1."
       }
     ],
     "errors": [],
     "links_to_add_in_tabla_estudios": {
       "GenotypeLink": "D:\\OneDrive - CGIAR\\Desktop\\codigos_dengue\\diet_project\\data\\raw\\31281883\\pmc_package\\PMC6609165\\aav8391_Data_S10.zip"
     }
+  },
+  "40676527_PRJNA859547": {
+    "pmid": "40676527",
+    "bioproject": "PRJNA859547",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/40676527/"
+    ]
+  },
+  "37491204_PRJNA859547": {
+    "pmid": "37491204",
+    "bioproject": "PRJNA859547",
+    "status": "completed",
+    "actions": [
+      {
+        "file": "12711_2023_822_MOESM1_ESM.xlsx",
+        "action": "join",
+        "col_sra": "sample_name",
+        "col_supp": "SampleID",
+        "strategy": "substring",
+        "matched_rows": 3136,
+        "total_rows": 4479,
+        "output": "D:\\OneDrive - CGIAR\\Desktop\\codigos_dengue\\diet_project\\data\\aligned\\37491204_PRJNA859547_metadata.updated.csv",
+        "llm_confidence": "high"
+      },
+      {
+        "file": "12711_2023_822_MOESM2_ESM.xlsx",
+        "action": "no_join",
+        "reason": "RAG data_type=genotype, not a per-animal table"
+      },
+      {
+        "file": "12711_2023_822_MOESM3_ESM.xlsx",
+        "action": "no_join",
+        "reason": "Table 2 does not have one row per animal/sample; it appears to summarize metagenome profiles rather than individual animals. The values in 'Metagenome Profile' (e.g., 'Grass Lamb', 'Grass Adult') do not correspond to specific animal identifiers found in the SRA metadata. Therefore, no join is possible."
+      },
+      {
+        "file": "12711_2023_822_MOESM4_ESM.xlsx",
+        "action": "join",
+        "col_sra": "host",
+        "col_supp": "Unnamed: 0",
+        "strategy": "direct",
+        "matched_rows": 4479,
+        "total_rows": 4479,
+        "output": "D:\\OneDrive - CGIAR\\Desktop\\codigos_dengue\\diet_project\\data\\aligned\\37491204_PRJNA859547_metadata.updated.csv",
+        "llm_confidence": "high"
+      }
+    ],
+    "errors": []
+  },
+  "37723422_PRJNA859547": {
+    "pmid": "37723422",
+    "bioproject": "PRJNA859547",
+    "status": "completed",
+    "actions": [
+      {
+        "file": "12864_2023_9660_MOESM1_ESM.xlsx",
+        "action": "join",
+        "col_sra": "sample_name",
+        "col_supp": "SampleID",
+        "strategy": "substring",
+        "matched_rows": 4476,
+        "total_rows": 4479,
+        "output": "D:\\OneDrive - CGIAR\\Desktop\\codigos_dengue\\diet_project\\data\\aligned\\37723422_PRJNA859547_metadata.updated.csv",
+        "llm_confidence": "high"
+      },
+      {
+        "file": "12864_2023_9660_MOESM2_ESM.xlsx",
+        "action": "no_join",
+        "reason": "RAG data_type=genotype, not a per-animal table"
+      },
+      {
+        "file": "12864_2023_9660_MOESM3_ESM.xlsx",
+        "action": "no_join",
+        "reason": "Table 2 does not have one row per animal/sample; it appears to contain biological features (e.g., OTUs or other metrics) rather than individual animal identifiers. For example, the values in Table 2 like 'Acetitomaculum' and 'Acidaminococcus' are not identifiers for individual animals. Therefore, no join is possible."
+      },
+      {
+        "file": "12864_2023_9660_MOESM4_ESM.xlsx",
+        "action": "no_join",
+        "reason": "TABLE 2 does not have one row per animal/sample; it appears to contain biological features (e.g., genera names like 'Acetitomaculum', 'Acidaminococcus') rather than individual animal identifiers. Therefore, it cannot be joined with TABLE 1, which has one row per sequencing run per animal. For example, 'Acetitomaculum' is a genus, not an animal identifier."
+      }
+    ],
+    "errors": []
+  },
+  "35281842_PRJNA517480": {
+    "pmid": "35281842",
+    "bioproject": "PRJNA517480",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/35281842/"
+    ]
+  },
+  "36199148_PRJEB31266;PRJEB21624;PRJEB10338": {
+    "pmid": "36199148",
+    "bioproject": "PRJEB31266;PRJEB21624;PRJEB10338",
+    "status": "error_no_sra",
+    "actions": [],
+    "errors": [
+      "CSV de SRA no encontrado: D:\\OneDrive - CGIAR\\Desktop\\codigos_dengue\\diet_project\\data\\PMID_Bioproject_SRAmetadata/36199148_PRJEB31266;PRJEB21624;PRJEB10338_metadata.csv"
+    ]
+  },
+  "36425044_PRJNA713003": {
+    "pmid": "36425044",
+    "bioproject": "PRJNA713003",
+    "status": "completed",
+    "actions": [],
+    "errors": []
+  },
+  "38892420_PRJNA517480": {
+    "pmid": "38892420",
+    "bioproject": "PRJNA517480",
+    "status": "completed",
+    "actions": [],
+    "errors": []
+  },
+  "39237607_PRJEB21624": {
+    "pmid": "39237607",
+    "bioproject": "PRJEB21624",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/39237607/"
+    ]
+  },
+  "40277354_PRJNA1215972": {
+    "pmid": "40277354",
+    "bioproject": "PRJNA1215972",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/40277354/"
+    ]
+  },
+  "40426027_PRJNA859547;PRJNA1106541": {
+    "pmid": "40426027",
+    "bioproject": "PRJNA859547;PRJNA1106541",
+    "status": "error_no_sra",
+    "actions": [],
+    "errors": [
+      "CSV de SRA no encontrado: D:\\OneDrive - CGIAR\\Desktop\\codigos_dengue\\diet_project\\data\\PMID_Bioproject_SRAmetadata/40426027_PRJNA859547;PRJNA1106541_metadata.csv"
+    ]
+  },
+  "40725062_PRJNA1161184": {
+    "pmid": "40725062",
+    "bioproject": "PRJNA1161184",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/40725062/"
+    ]
+  },
+  "41013568_PRJNA1162942": {
+    "pmid": "41013568",
+    "bioproject": "PRJNA1162942",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/41013568/"
+    ]
+  },
+  "41090326_PRJNA1297424": {
+    "pmid": "41090326",
+    "bioproject": "PRJNA1297424",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/41090326/"
+    ]
+  },
+  "40980873_PRJEB83989": {
+    "pmid": "40980873",
+    "bioproject": "PRJEB83989",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/40980873/"
+    ]
+  },
+  "41163263_PRJDB35449": {
+    "pmid": "41163263",
+    "bioproject": "PRJDB35449",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/41163263/"
+    ]
+  },
+  "41290820_PRJNA641164": {
+    "pmid": "41290820",
+    "bioproject": "PRJNA641164",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/41290820/"
+    ]
+  },
+  "30894588_PRJNA493225": {
+    "pmid": "30894588",
+    "bioproject": "PRJNA493225",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/30894588/"
+    ]
+  },
+  "31196178_PRJNA393057": {
+    "pmid": "31196178",
+    "bioproject": "PRJNA393057",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/31196178/"
+    ]
+  },
+  "31354652_PRJNA525436": {
+    "pmid": "31354652",
+    "bioproject": "PRJNA525436",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/31354652/"
+    ]
+  },
+  "31362392_PRJNA525989": {
+    "pmid": "31362392",
+    "bioproject": "PRJNA525989",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/31362392/"
+    ]
+  },
+  "31608292_PRJNA534330": {
+    "pmid": "31608292",
+    "bioproject": "PRJNA534330",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/31608292/"
+    ]
+  },
+  "31803152_PRJNA525436;PRJNA525850": {
+    "pmid": "31803152",
+    "bioproject": "PRJNA525436;PRJNA525850",
+    "status": "error_no_sra",
+    "actions": [],
+    "errors": [
+      "CSV de SRA no encontrado: D:\\OneDrive - CGIAR\\Desktop\\codigos_dengue\\diet_project\\data\\PMID_Bioproject_SRAmetadata/31803152_PRJNA525436;PRJNA525850_metadata.csv"
+    ]
+  },
+  "32330150_PRJNA402989": {
+    "pmid": "32330150",
+    "bioproject": "PRJNA402989",
+    "status": "error_no_sra",
+    "actions": [],
+    "errors": [
+      "CSV de SRA no encontrado: D:\\OneDrive - CGIAR\\Desktop\\codigos_dengue\\diet_project\\data\\PMID_Bioproject_SRAmetadata/32330150_PRJNA402989_metadata.csv"
+    ]
+  },
+  "32366970_PRJEB28065": {
+    "pmid": "32366970",
+    "bioproject": "PRJEB28065",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/32366970/"
+    ]
+  },
+  "32793146_PRJNA610813": {
+    "pmid": "32793146",
+    "bioproject": "PRJNA610813",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/32793146/"
+    ]
+  },
+  "32861497_PRJNA557500": {
+    "pmid": "32861497",
+    "bioproject": "PRJNA557500",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/32861497/"
+    ]
+  },
+  "36809041_PRJNA874721": {
+    "pmid": "36809041",
+    "bioproject": "PRJNA874721",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/36809041/"
+    ]
+  },
+  "37117259_PRJNA772293": {
+    "pmid": "37117259",
+    "bioproject": "PRJNA772293",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/37117259/"
+    ]
+  },
+  "37275608_PRJNA887912": {
+    "pmid": "37275608",
+    "bioproject": "PRJNA887912",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/37275608/"
+    ]
+  },
+  "37550361_PRJNA906944": {
+    "pmid": "37550361",
+    "bioproject": "PRJNA906944",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/37550361/"
+    ]
+  },
+  "37644504_PRJNA867677": {
+    "pmid": "37644504",
+    "bioproject": "PRJNA867677",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/37644504/"
+    ]
+  },
+  "37680535_PRJNA975466;PRJNA976941": {
+    "pmid": "37680535",
+    "bioproject": "PRJNA975466;PRJNA976941",
+    "status": "error_no_sra",
+    "actions": [],
+    "errors": [
+      "CSV de SRA no encontrado: D:\\OneDrive - CGIAR\\Desktop\\codigos_dengue\\diet_project\\data\\PMID_Bioproject_SRAmetadata/37680535_PRJNA975466;PRJNA976941_metadata.csv"
+    ]
+  },
+  "37758745_PRJNA448333": {
+    "pmid": "37758745",
+    "bioproject": "PRJNA448333",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/37758745/"
+    ]
+  },
+  "37858227_PRJNA981443": {
+    "pmid": "37858227",
+    "bioproject": "PRJNA981443",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/37858227/"
+    ]
+  },
+  "38029196_PRJNA949096;PRJNA949119": {
+    "pmid": "38029196",
+    "bioproject": "PRJNA949096;PRJNA949119",
+    "status": "error_no_sra",
+    "actions": [],
+    "errors": [
+      "CSV de SRA no encontrado: D:\\OneDrive - CGIAR\\Desktop\\codigos_dengue\\diet_project\\data\\PMID_Bioproject_SRAmetadata/38029196_PRJNA949096;PRJNA949119_metadata.csv"
+    ]
+  },
+  "38163076_PRJNA987743": {
+    "pmid": "38163076",
+    "bioproject": "PRJNA987743",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/38163076/"
+    ]
+  },
+  "38182709_PRJNA922943": {
+    "pmid": "38182709",
+    "bioproject": "PRJNA922943",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/38182709/"
+    ]
+  },
+  "38321581_PRJNA962991": {
+    "pmid": "38321581",
+    "bioproject": "PRJNA962991",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/38321581/"
+    ]
+  },
+  "38444805_PRJNA1000955": {
+    "pmid": "38444805",
+    "bioproject": "PRJNA1000955",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/38444805/"
+    ]
+  },
+  "38443809_PRJNA955175": {
+    "pmid": "38443809",
+    "bioproject": "PRJNA955175",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/38443809/"
+    ]
+  },
+  "38491422_PRJEB31266;PRJEB21624;PRJEB10338;PRJEB70912": {
+    "pmid": "38491422",
+    "bioproject": "PRJEB31266;PRJEB21624;PRJEB10338;PRJEB70912",
+    "status": "error_no_sra",
+    "actions": [],
+    "errors": [
+      "CSV de SRA no encontrado: D:\\OneDrive - CGIAR\\Desktop\\codigos_dengue\\diet_project\\data\\PMID_Bioproject_SRAmetadata/38491422_PRJEB31266;PRJEB21624;PRJEB10338;PRJEB70912_metadata.csv"
+    ]
+  },
+  "38505558_PRJNA713003": {
+    "pmid": "38505558",
+    "bioproject": "PRJNA713003",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/38505558/"
+    ]
+  },
+  "38536522_PRJNA1044090": {
+    "pmid": "38536522",
+    "bioproject": "PRJNA1044090",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/38536522/"
+    ]
+  },
+  "38616869_PRJNA785092": {
+    "pmid": "38616869",
+    "bioproject": "PRJNA785092",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/38616869/"
+    ]
+  },
+  "25803688_PRJNA239421": {
+    "pmid": "25803688",
+    "bioproject": "PRJNA239421",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/25803688/"
+    ]
+  },
+  "26509835_PRJEB10579;PRJEB10640": {
+    "pmid": "26509835",
+    "bioproject": "PRJEB10579;PRJEB10640",
+    "status": "error_no_sra",
+    "actions": [],
+    "errors": [
+      "CSV de SRA no encontrado: D:\\OneDrive - CGIAR\\Desktop\\codigos_dengue\\diet_project\\data\\PMID_Bioproject_SRAmetadata/26509835_PRJEB10579;PRJEB10640_metadata.csv"
+    ]
+  },
+  "35414107_PRJEB31266;PRJEB21624;PRJEB10338": {
+    "pmid": "35414107",
+    "bioproject": "PRJEB31266;PRJEB21624;PRJEB10338",
+    "status": "error_no_sra",
+    "actions": [],
+    "errors": [
+      "CSV de SRA no encontrado: D:\\OneDrive - CGIAR\\Desktop\\codigos_dengue\\diet_project\\data\\PMID_Bioproject_SRAmetadata/35414107_PRJEB31266;PRJEB21624;PRJEB10338_metadata.csv"
+    ]
+  },
+  "35615517_PRJNA789417": {
+    "pmid": "35615517",
+    "bioproject": "PRJNA789417",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/35615517/"
+    ]
+  },
+  "35744623_PRJNA795301": {
+    "pmid": "35744623",
+    "bioproject": "PRJNA795301",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/35744623/"
+    ]
+  },
+  "35778422_PRJNA760255": {
+    "pmid": "35778422",
+    "bioproject": "PRJNA760255",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/35778422/"
+    ]
+  },
+  "36177471_PRJNA856508": {
+    "pmid": "36177471",
+    "bioproject": "PRJNA856508",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/36177471/"
+    ]
+  },
+  "36102532_PRJNA597489;PRJNA741384": {
+    "pmid": "36102532",
+    "bioproject": "PRJNA597489;PRJNA741384",
+    "status": "error_no_sra",
+    "actions": [],
+    "errors": [
+      "CSV de SRA no encontrado: D:\\OneDrive - CGIAR\\Desktop\\codigos_dengue\\diet_project\\data\\PMID_Bioproject_SRAmetadata/36102532_PRJNA597489;PRJNA741384_metadata.csv"
+    ]
+  },
+  "36368924_PRJNA783381": {
+    "pmid": "36368924",
+    "bioproject": "PRJNA783381",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/36368924/"
+    ]
+  },
+  "36434501_PRJNA723543": {
+    "pmid": "36434501",
+    "bioproject": "PRJNA723543",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/36434501/"
+    ]
+  },
+  "36478863_PRJNA885963": {
+    "pmid": "36478863",
+    "bioproject": "PRJNA885963",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/36478863/"
+    ]
+  },
+  "36374018_PRJNA820152": {
+    "pmid": "36374018",
+    "bioproject": "PRJNA820152",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/36374018/"
+    ]
+  },
+  "36590412_PRJNA661353": {
+    "pmid": "36590412",
+    "bioproject": "PRJNA661353",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/36590412/"
+    ]
+  },
+  "36617172_PRJNA558986": {
+    "pmid": "36617172",
+    "bioproject": "PRJNA558986",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/36617172/"
+    ]
+  },
+  "27375609_PRJEB12948": {
+    "pmid": "27375609",
+    "bioproject": "PRJEB12948",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/27375609/"
+    ]
+  },
+  "27467559_PRJNA290544": {
+    "pmid": "27467559",
+    "bioproject": "PRJNA290544",
+    "status": "error_no_sra",
+    "actions": [],
+    "errors": [
+      "CSV de SRA no encontrado: D:\\OneDrive - CGIAR\\Desktop\\codigos_dengue\\diet_project\\data\\PMID_Bioproject_SRAmetadata/27467559_PRJNA290544_metadata.csv"
+    ]
+  },
+  "27760570_PRJNA202380": {
+    "pmid": "27760570",
+    "bioproject": "PRJNA202380",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/27760570/"
+    ]
+  },
+  "27966600_PRJNA313132": {
+    "pmid": "27966600",
+    "bioproject": "PRJNA313132",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/27966600/"
+    ]
+  },
+  "28076447_PRJEB11872": {
+    "pmid": "28076447",
+    "bioproject": "PRJEB11872",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/28076447/"
+    ]
+  },
+  "28261182_PRJNA339907": {
+    "pmid": "28261182",
+    "bioproject": "PRJNA339907",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/28261182/"
+    ]
+  },
+  "28596764_PRJNA369201": {
+    "pmid": "28596764",
+    "bioproject": "PRJNA369201",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/28596764/"
+    ]
+  },
+  "29967596_PRJNA438821": {
+    "pmid": "29967596",
+    "bioproject": "PRJNA438821",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/29967596/"
+    ]
+  },
+  "30169754_PRJNA430095": {
+    "pmid": "30169754",
+    "bioproject": "PRJNA430095",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/30169754/"
+    ]
+  },
+  "30312316_PRJEB28065": {
+    "pmid": "30312316",
+    "bioproject": "PRJEB28065",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/30312316/"
+    ]
+  },
+  "32751619_PRJNA639952": {
+    "pmid": "32751619",
+    "bioproject": "PRJNA639952",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/32751619/"
+    ]
+  },
+  "33542279_PRJNA641997": {
+    "pmid": "33542279",
+    "bioproject": "PRJNA641997",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/33542279/"
+    ]
+  },
+  "33927700_PRJEB28065": {
+    "pmid": "33927700",
+    "bioproject": "PRJEB28065",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/33927700/"
+    ]
+  },
+  "34310617_PRJNA723543": {
+    "pmid": "34310617",
+    "bioproject": "PRJNA723543",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/34310617/"
+    ]
+  },
+  "34354694_PRJNA725944": {
+    "pmid": "34354694",
+    "bioproject": "PRJNA725944",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/34354694/"
+    ]
+  },
+  "34741032_PRJEB43305": {
+    "pmid": "34741032",
+    "bioproject": "PRJEB43305",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/34741032/"
+    ]
+  },
+  "34827843_PRJEB48001": {
+    "pmid": "34827843",
+    "bioproject": "PRJEB48001",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/34827843/"
+    ]
+  },
+  "35095788_PRJNA713003": {
+    "pmid": "35095788",
+    "bioproject": "PRJNA713003",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/35095788/"
+    ]
+  },
+  "39027100_PRJNA1080562": {
+    "pmid": "39027100",
+    "bioproject": "PRJNA1080562",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/39027100/"
+    ]
+  },
+  "39024228_PRJNA1006003": {
+    "pmid": "39024228",
+    "bioproject": "PRJNA1006003",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/39024228/"
+    ]
+  },
+  "39173024_PRJDB17686": {
+    "pmid": "39173024",
+    "bioproject": "PRJDB17686",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/39173024/"
+    ]
+  },
+  "39304935_PRJNA483745": {
+    "pmid": "39304935",
+    "bioproject": "PRJNA483745",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/39304935/"
+    ]
+  },
+  "39314883_PRJNA1099693;PRJNA1101717": {
+    "pmid": "39314883",
+    "bioproject": "PRJNA1099693;PRJNA1101717",
+    "status": "error_no_sra",
+    "actions": [],
+    "errors": [
+      "CSV de SRA no encontrado: D:\\OneDrive - CGIAR\\Desktop\\codigos_dengue\\diet_project\\data\\PMID_Bioproject_SRAmetadata/39314883_PRJNA1099693;PRJNA1101717_metadata.csv"
+    ]
+  },
+  "39252598_PRJNA1100441": {
+    "pmid": "39252598",
+    "bioproject": "PRJNA1100441",
+    "status": "error_no_sra",
+    "actions": [],
+    "errors": [
+      "CSV de SRA no encontrado: D:\\OneDrive - CGIAR\\Desktop\\codigos_dengue\\diet_project\\data\\PMID_Bioproject_SRAmetadata/39252598_PRJNA1100441_metadata.csv"
+    ]
+  },
+  "39472728_PRJNA962991": {
+    "pmid": "39472728",
+    "bioproject": "PRJNA962991",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/39472728/"
+    ]
+  },
+  "39528942_PRJNA1174395": {
+    "pmid": "39528942",
+    "bioproject": "PRJNA1174395",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/39528942/"
+    ]
+  },
+  "39640544_PRJNA1004089": {
+    "pmid": "39640544",
+    "bioproject": "PRJNA1004089",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/39640544/"
+    ]
+  },
+  "39228372_PRJNA747921": {
+    "pmid": "39228372",
+    "bioproject": "PRJNA747921",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/39228372/"
+    ]
+  },
+  "40034457_PRJNA996773;PRJNA996729": {
+    "pmid": "40034457",
+    "bioproject": "PRJNA996773;PRJNA996729",
+    "status": "error_no_sra",
+    "actions": [],
+    "errors": [
+      "CSV de SRA no encontrado: D:\\OneDrive - CGIAR\\Desktop\\codigos_dengue\\diet_project\\data\\PMID_Bioproject_SRAmetadata/40034457_PRJNA996773;PRJNA996729_metadata.csv"
+    ]
+  },
+  "39913259_PRJNA1152958": {
+    "pmid": "39913259",
+    "bioproject": "PRJNA1152958",
+    "status": "error_no_supplementary",
+    "actions": [],
+    "errors": [
+      "No hay archivos suplementarios en data/raw/39913259/"
+    ]
   }
 }
